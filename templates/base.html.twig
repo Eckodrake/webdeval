@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr-BE">
+    <head>
+        {# Meta #}
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta http-equiv="refresh" content="300">
+        <meta name="keywords"
+              content="HTML,CSS,PHP,JS,JavaScript,portfolio,blog,design,developer,code,symfony,webdeval">
+        <meta name="author" content="Valentin Saint-Jean">
+        <meta name="description" content="Portfolio et blog de Valentin Saint-Jean">
+
+        {# Link #}
+        <link rel="stylesheet" href="{{ asset('/assets/css/normalize.css') }}">
+        {% block stylesheet %}{% endblock %}
+
+        {# Title #}
+        <title>{% block title '' %} ~ Webdeval</title>
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
