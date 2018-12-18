@@ -1,0 +1,41 @@
+{
+  "name": "sf-portfolio",
+  "version": "1.0.0",
+  "description": "Valentin Saint-Jean's Portfolio and blog",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Talenvni/portfolio.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "PHP",
+    "JS",
+    "JavaScript",
+    "design",
+    "developer",
+    "code",
+    "portfolio",
+    "webdeval"
+  ],
+  "author": "Valentin Saint-Jean <contact@webdeval.be> (https://www.webdeval.be)",
+  "license": "GPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/Talenvni/portfolio/issues"
+  },
+  "homepage": "https://github.com/Talenvni/portfolio#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-rename": "^1.4.0",
+    "gulp-responsive": "^2.11.0"
+  }
+}

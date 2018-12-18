@@ -1,0 +1,15 @@
+html {
+  font-size: 62.5%;
+  @include responsive(tablet-portrait) {
+    font-size: 75%;
+  }
+  @include responsive(tablet-landscape) {
+    font-size: 87.5%;
+  }
+  @include responsive(desktop) {
+    font-size: 100%;
+  }
+  @include responsive(desktop-big) {
+    font-size: 112.5%;
+  }
+}
