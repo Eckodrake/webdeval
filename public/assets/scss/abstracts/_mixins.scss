@@ -1,3 +1,32 @@
+// --------
+// Flex-box
+// --------
+@mixin flex($direction, $content, $align, $wrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $content;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+@mixin grid($column, $row) {
+  display: grid;
+  grid-template-columns: $column;
+  grid-template-rows: $row;
+}
+
+// ---------
+// Positions
+// ---------
+@mixin position($position, $top, $right, $bottom, $left, $index) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  z-index: $index;
+}
+
 // ------------
 // Breakpoints
 //
@@ -5,21 +34,27 @@
 // ------------
 
 @mixin responsive($breakpoints) {
+  @if $breakpoints == mobile {
+    // 0px
+    @media only screen and (min-width: 0) {
+      @content
+    }
+  }
   @if $breakpoints == tablet-portrait {
     // 600px
-    @media only screen and (min-width: 37.5em) and (max-width: 56.25em) {
+    @media only screen and (min-width: 37.5em) {
       @content
     }
   }
   @if $breakpoints == tablet-landscape {
     // 900px
-    @media only screen and (min-width: 56.25em) and (max-width: 75em) {
+    @media only screen and (min-width: 56.25em) {
       @content
     }
   }
   @if $breakpoints == desktop {
     // 1200px
-    @media only screen and (min-width: 75em) and (max-width: 112.5em) {
+    @media only screen and (min-width: 75em) {
       @content
     }
   }
@@ -29,5 +64,10 @@
       @content
     }
   }
+  @if $breakpoints == image {
+    // Load image at best resolution
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 112.5em) {
+      @content
+    }
+  }
 }
-

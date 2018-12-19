@@ -3,10 +3,13 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
 // Components
+@import "components/footer";
+@import "components/grid";
+@import "components/sidebar";
 // Layout
 @import "layouts/animations";
 @import "layouts/base";
 @import "layouts/stats";
 // Pages
+@import "pages/portfolio";
 // Vendor
-

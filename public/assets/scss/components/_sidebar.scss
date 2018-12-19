@@ -1,0 +1,7 @@
+.sidebar {
+  // Default CSS
+  @include responsive(mobile) {
+    min-height: 5vh; // Needed when grid not active
+    background: $bg-primary;
+  }
+}

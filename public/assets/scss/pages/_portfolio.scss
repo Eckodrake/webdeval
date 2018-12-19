@@ -1,0 +1,13 @@
+.portfolio {
+  &-banner {
+    // Default CSS
+    @include responsive(mobile) {
+      min-height: 85vh;
+      background: url(https://via.placeholder.com/1200x1080) center / cover;
+    }
+    // Load image mobile and low resolution
+    @include responsive(image) {
+      background: url(https://via.placeholder.com/1920x1080) center / cover;
+    }
+  }
+}

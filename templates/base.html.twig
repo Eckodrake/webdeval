@@ -12,7 +12,7 @@
         <meta name="author" content="Valentin Saint-Jean">
         <meta name="description" content="Portfolio et blog de Valentin Saint-Jean">
 
-        {# Link #}
+        {# Links #}
         <link rel="stylesheet" href="{{ asset('/assets/css/normalize.css') }}">
         <link rel="stylesheet" href="{{ asset('/assets/css/global.min.css') }}">
         {% block stylesheet %}{% endblock %}
@@ -21,7 +21,16 @@
         <title>{% block title '' %} ~ Webdeval</title>
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {# Grid skeleton #}
+        <div class="grid">
+            {# Sidebar #}
+            <aside class="sidebar"></aside>
+            {# Main #}
+            {% block body %}{% endblock %}
+            {# Footer #}
+            <footer class="footer"></footer>
+        </div>
+        {# Scripts #}
         {% block javascripts %}{% endblock %}
     </body>
 </html>

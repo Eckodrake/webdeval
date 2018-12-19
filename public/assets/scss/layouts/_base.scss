@@ -1,5 +1,10 @@
+// Responsive font-size
+// 100% equals 16px (default browser)
 html {
-  font-size: 62.5%;
+  // Default CSS
+  @include responsive(mobile) {
+    font-size: 62.5%;
+  }
   @include responsive(tablet-portrait) {
     font-size: 75%;
   }
@@ -11,5 +16,14 @@ html {
   }
   @include responsive(desktop-big) {
     font-size: 112.5%;
+  }
+}
+
+body {
+  // Default CSS
+  @include responsive(mobile) {
+    height: inherit; // Inherit from Html
+    color: $body-color;
+    background: $body-bg;
   }
 }

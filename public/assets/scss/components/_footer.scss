@@ -1,0 +1,8 @@
+.footer {
+  // Default CSS
+  @include responsive(mobile) {
+    grid-column: 1/3; // Take max-width in grid skeleton
+    min-height: 25vh;
+    background: $bg-dark;
+  }
+}
