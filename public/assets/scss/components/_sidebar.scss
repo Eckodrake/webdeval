@@ -1,4 +1,11 @@
 .sidebar {
+  @include responsive(desktop) {
+    // This creates a background on the portfolio while hover the sidebar
+    &:hover + .portfolio:after {
+      opacity: .9;
+    }
+  }
+
   // Default CSS
   @include responsive(mobile) {
     min-height: 5vh; // Needed when grid not active

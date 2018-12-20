@@ -7,5 +7,51 @@
     {# portfolio page #}
     <main class="portfolio">
         <header role="banner" class="portfolio-banner"></header>
+        <section class="intro">
+            <h1 class="intro-title">
+                Salut, mon nom est Valentin. Je crée des sites <strong>fonctionnels</strong> au
+                <strong><span lang="en" translate="no">design</span></strong> recherché.
+                Voici les services principaux que je fournis :
+            </h1>
+        </section>
+        <section class="services">
+            <div class="services-container">
+                <div class="services-block">
+                    <img src="{{ asset('/assets/img/vendor/design.png') }}" alt="Ampoule de créativité"
+                         class="services-img">
+                    <div>
+                        <h2 class="services-title"><span lang="en" translate="no">Design</span></h2>
+                        <p>
+                            Un <span lang="en" translate="no">design</span> adapté pour vous ou votre public.
+                            Les <span lang="en" translate="no">canvas</span> sont fournis en modèle mobile et
+                            <span lang="en" translate="no">desktop</span> pour une
+                            <span lang="en" translate="no">responsive</span> optimale.
+                        </p>
+                    </div>
+                </div>
+                <div class="services-block">
+                    <img src="{{ asset('/assets/img/vendor/development.png') }}" alt="Rouage de développement"
+                         class="services-img">
+                    <div>
+                        <h2 class="services-title">Développement</h2>
+                        <p>
+                            Un site optimal est un site en bonne santé. <span lang="en" translate="no">Responsive</span>,
+                            sécurisé, référencé et mis à jour sont les piliers du développement proposé.
+                        </p>
+                    </div>
+                </div>
+                <div class="services-block">
+                    <img src="{{ asset('/assets/img/vendor/social.png') }}" alt="Télescope du social"
+                         class="services-img">
+                    <div>
+                        <h2 class="services-title">Social</h2>
+                        <p>
+                            Rallier le Monde à votre cause sur les réseaux sociaux, c'est important.
+                            Que ce soit en affichant votre marque ou en rédaction.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 {% endblock %}

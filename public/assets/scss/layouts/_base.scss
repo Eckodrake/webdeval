@@ -22,8 +22,14 @@ html {
 body {
   // Default CSS
   @include responsive(mobile) {
-    height: inherit; // Inherit from Html
-    color: $body-color;
-    background: $body-bg;
+    height: inherit; // Inherit from html
+    color: $bg-grey;
+    background: $bg-white;
+    font-family: $font-body;
   }
+}
+
+::selection {
+  color: $bg-dark;
+  background: $bg-primary;
 }

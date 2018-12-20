@@ -1,12 +1,12 @@
 .grid {
   // Default CSS
   @include responsive(mobile) {
-    height: inherit; // Inherit from Body
+    height: inherit; // Inherit from body
   }
   // Create grid with two columns (sidebar + main)
   // The sidebar takes max-height due to row 1fr
   // And add the footer on bottom (_footer.scss)
   @include responsive(tablet-landscape) {
-    @include grid(.2fr auto, 1fr auto);
+    @include grid(.2fr 1fr, 1fr auto);
   }
 }

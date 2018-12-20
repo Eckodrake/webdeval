@@ -15,6 +15,7 @@
         {# Links #}
         <link rel="stylesheet" href="{{ asset('/assets/css/normalize.css') }}">
         <link rel="stylesheet" href="{{ asset('/assets/css/global.min.css') }}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700">
         {% block stylesheet %}{% endblock %}
 
         {# Title #}
@@ -28,7 +29,9 @@
             {# Main #}
             {% block body %}{% endblock %}
             {# Footer #}
-            <footer class="footer"></footer>
+            <footer class="footer">
+                <a href="https://fr.freepik.com/photos-vecteurs-libre/millesime">Millésime vecteur créé par freepik - fr.freepik.com</a>
+            </footer>
         </div>
         {# Scripts #}
         {% block javascripts %}{% endblock %}

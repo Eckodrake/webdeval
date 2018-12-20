@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 const rename = require('gulp-rename');
-const resize = require('gulp-responsive');
 const compass = require('gulp-compass');
 const cleanCSS = require('gulp-clean-css');
 const imageMIN = require('gulp-imagemin');
@@ -29,15 +28,8 @@ gulp.task('minimize', () => {
 
 gulp.task('resize', () => {
     return gulp.src('public/assets/img/vendor/*.{png,jpg}')
-    // Thumbnails
-        .pipe(resize({
-            '*.{png,jpg}': {
-                width: 70,
-                quality: 80
-            }
-        }))
-        .pipe(imageMIN())
-        .pipe(gulp.dest('public/assets/img/thumbnails/'));
+    // Resize image
+        .pipe(imageMIN());
 });
 
 gulp.task('watch', function () {
