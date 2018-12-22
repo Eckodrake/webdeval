@@ -1,12 +1,17 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 .grid {
   // Default CSS
   @include responsive(mobile) {
     height: inherit; // Inherit from body
   }
-  // Create grid with two columns (sidebar + main)
-  // The sidebar takes max-height due to row 1fr
-  // And add the footer on bottom (_footer.scss)
+  // Create grid with two columns (sidebar + main block)
+  // The sidebar takes max-height due to row-template at 1fr
+  // And add the footer on all bottom (_footer.scss)
+  // Tale effectif from tablet landscape to big desktop
   @include responsive(tablet-landscape) {
     @include grid(.2fr 1fr, 1fr auto);
   }
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

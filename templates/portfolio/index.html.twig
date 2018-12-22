@@ -6,7 +6,10 @@
 {% block body %}
     {# portfolio page #}
     <main class="portfolio">
+        {# Banner #}
         <header role="banner" class="portfolio-banner"></header>
+
+        {# Intro #}
         <section class="intro">
             <h1 class="intro-title">
                 Salut, mon nom est Valentin. Je crée des sites <strong>fonctionnels</strong> au
@@ -14,14 +17,18 @@
                 Voici les services principaux que je fournis :
             </h1>
         </section>
+
+        {# Services #}
         <section class="services">
             <div class="services-container">
                 <div class="services-block">
-                    <img src="{{ asset('/assets/img/vendor/design.png') }}" alt="Ampoule de créativité"
+                    <img src="{{ asset('/assets/img/desktop/services/design.png') }}"
+                         srcset="{{ asset('/assets/img/mobile/services/design-small.png') }} 1x, {{ asset('/assets/img/desktop/services/design.png') }} 2x"
+                         alt="Ampoule de créativité"
                          class="services-img">
                     <div>
                         <h2 class="services-title"><span lang="en" translate="no">Design</span></h2>
-                        <p>
+                        <p class="services-paragraph">
                             Un <span lang="en" translate="no">design</span> adapté pour vous ou votre public.
                             Les <span lang="en" translate="no">canvas</span> sont fournis en modèle mobile et
                             <span lang="en" translate="no">desktop</span> pour une
@@ -30,28 +37,37 @@
                     </div>
                 </div>
                 <div class="services-block">
-                    <img src="{{ asset('/assets/img/vendor/development.png') }}" alt="Rouage de développement"
+                    <img src="{{ asset('/assets/img/desktop/services/development.png') }}"
+                         srcset="{{ asset('/assets/img/mobile/services/development-small.png') }} 1x, {{ asset('/assets/img/desktop/services/development.png') }} 2x"
+                         alt="Rouage de développement"
                          class="services-img">
                     <div>
                         <h2 class="services-title">Développement</h2>
-                        <p>
+                        <p class="services-paragraph">
                             Un site optimal est un site en bonne santé. <span lang="en" translate="no">Responsive</span>,
                             sécurisé, référencé et mis à jour sont les piliers du développement proposé.
                         </p>
                     </div>
                 </div>
                 <div class="services-block">
-                    <img src="{{ asset('/assets/img/vendor/social.png') }}" alt="Télescope du social"
+                    <img src="{{ asset('/assets/img/desktop/services/social.png') }}"
+                         srcset="{{ asset('/assets/img/mobile/services/social-small.png') }} 1x, {{ asset('/assets/img/desktop/services/social.png') }} 2x"
+                         alt="Télescope du social"
                          class="services-img">
                     <div>
                         <h2 class="services-title">Social</h2>
-                        <p>
+                        <p class="services-paragraph">
                             Rallier le Monde à votre cause sur les réseaux sociaux, c'est important.
                             Que ce soit en affichant votre marque ou en rédaction.
                         </p>
                     </div>
                 </div>
             </div>
+        </section>
+
+        {# Works #}
+        <section class="works">
+
         </section>
     </main>
 {% endblock %}

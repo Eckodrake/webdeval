@@ -27,7 +27,7 @@ gulp.task('minimize', () => {
 });
 
 gulp.task('resize', () => {
-    return gulp.src('public/assets/img/vendor/*.{png,jpg}')
+    return gulp.src('public/assets/img/desktop/*/*.{png,jpg}')
     // Resize image
         .pipe(imageMIN());
 });
@@ -35,5 +35,5 @@ gulp.task('resize', () => {
 gulp.task('watch', function () {
     gulp.watch('public/assets/scss/*.scss', gulp.series(['compass', 'minimize']));
     gulp.watch('public/assets/scss/*/*.scss', gulp.series(['compass', 'minimize']));
-    gulp.watch('public/assets/img/vendor/*', gulp.series(['resize']));
+    gulp.watch('public/assets/img/desktop/*/*', gulp.series(['resize']));
 });

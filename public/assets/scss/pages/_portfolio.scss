@@ -1,3 +1,5 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 .portfolio {
   // Default CSS
   @include responsive(mobile) {
@@ -14,9 +16,11 @@
       background: url(https://via.placeholder.com/1920x1080) center / cover;
     }
   }
+  // Block appears when hover sidebar
   &:after {
     content: '';
     display: block;
+    width: 0;
     background: $bg-dark;
     opacity: 0;
     transition: opacity .2s ease-in; // Transition for the hover on the sidebar
@@ -24,59 +28,91 @@
   }
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 .intro {
   // Default CSS
   @include responsive(mobile) {
     background: $bg-secondary;
   }
-  @include flex(null, center, center, null);
+  @include flex(null, center, center, null); // Center block in intro section
 
   &-title {
     // Default CSS
     @include responsive(mobile) {
-      padding: 2.5rem 2rem;
-      text-align: center;
-      line-height: 1.6;
+      padding: 2.5rem 2rem; // Replace height on intro block for more adaptability
+      text-align: center; // Better text align
+      line-height: 1.6; // Line-height of text intro
     }
+    // Desktop CSS
     @include responsive(desktop) {
-      padding: 5rem 15rem;
+      padding: 5rem 15rem; // Replace height on intro block for more adaptability
     }
   }
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 .services {
   // Default CSS
   @include responsive(mobile) {
     min-height: 30vh;
     background: $bg-white;
+
+    @include flex(null, center, center, null); // Center all elements in mobile and tablet device
+
     &-container {
-      padding: 0 2rem;
+      padding: 0 2rem; // More centered block on mobile
       @include flex(column, space-around, flex-start, null); // All block beneath each other
     }
     &-block {
-      text-align: justify;
-      @include flex(row, space-around, center, null); // Align all services in row
+      text-align: justify; // Better text block on mobile device
+      @include grid(.5fr 1fr, 1fr); // Blocks below each other on mobile device
+    }
+    &-img {
+      width: 5rem; // 80px on mobile device
+      margin: auto; // Centered image with sibling block on grid system
     }
     &-title {
-      text-transform: uppercase;
+      text-transform: uppercase; // Title services uppercase
     }
   }
+  // Desktop CSS
   @include responsive(desktop) {
+    display: block; // Remove the flex of mobile and tablet device for better disposition of elements
     &-container {
-      padding: 0;
-      transform: translateY(-3.5rem);
-      @include grid(repeat(auto-fit, minmax(calc(61rem/3), 1fr)), 1fr); // All block following each other
+      padding: 0; // Remove padding from mobile device
+      transform: translateY(-3.5rem); // Images up between services and intro block
+      @include grid(repeat(auto-fit, minmax(calc(61rem / 3), 1fr)), 1fr); // All block following each other
     }
     &-block {
       display: block; // Cancel the flex on mobile device
-      text-align: center;
+      text-align: center; // Better text block on desktop device
     }
     &-img {
       background: $bg-white;
-      border-radius: 25rem;
+      border-radius: 25rem; // Block rounded
+      width: 7.5rem; // 120px on mobile device
     }
-    p {
-      padding: 0 2rem;
+    &-title {
+      &:before {
+        content: '';
+        display: block;
+        width: 3rem;
+        height: .2rem;
+        margin: 1rem auto;
+        background: $bg-primary;
+      }
+    }
+    &-paragraph {
+      padding: 0 2rem; // Better text block centered
     }
   }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.works {
+  min-height: 30vh;
+  background: $bg-success;
 }

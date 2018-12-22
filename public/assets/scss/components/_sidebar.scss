@@ -1,14 +1,25 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 .sidebar {
+  // Default CSS
+  @include responsive(mobile) {
+    min-height: 5vh; // Needed when grid not active on the sidebar
+    grid-row: 1/3; // Sidebar takes all vertical height
+    background: linear-gradient(to bottom, #3c3b3f, #605c3c, #3c3b3f);;
+  }
+
+  // Desktop CSS
   @include responsive(desktop) {
+    transition: box-shadow .2s ease-in;
+    &:hover {
+      box-shadow: inset 0 0 1rem $bg-dark;
+    }
     // This creates a background on the portfolio while hover the sidebar
     &:hover + .portfolio:after {
+      width: auto;
       opacity: .9;
     }
   }
-
-  // Default CSS
-  @include responsive(mobile) {
-    min-height: 5vh; // Needed when grid not active
-    background: $bg-primary;
-  }
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
