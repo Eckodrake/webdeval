@@ -4,8 +4,7 @@
   // Default CSS
   @include responsive(mobile) {
     grid-column: 2/3; // Take max-width in grid skeleton next sidebar
-    min-height: 25vh;
-    background: $bg-dark;
+    min-height: 50vh;
   }
 }
 

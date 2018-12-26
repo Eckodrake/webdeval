@@ -30,9 +30,25 @@ body {
   // Default CSS
   @include responsive(mobile) {
     height: inherit; // Inherit from html
-    color: $bg-grey;
-    background: $bg-white;
+    color: $bg-dark;
+    background: $bg-light;
     font-family: $font-body;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+a {
+  @include responsive(mobile) {
+    text-decoration: none;
+    color: $bg-primary;
+    transition: color .2s ease;
+  }
+
+  &:hover {
+    @include responsive(mobile) {
+      color: $bg-secondary;
+    }
   }
 }
 
@@ -40,7 +56,7 @@ body {
 
 ::selection {
   color: $bg-dark;
-  background: $bg-success;
+  background: $bg-primary;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

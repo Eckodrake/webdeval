@@ -15,7 +15,10 @@
         {# Links #}
         <link rel="stylesheet" href="{{ asset('/assets/css/normalize.css') }}">
         <link rel="stylesheet" href="{{ asset('/assets/css/global.min.css') }}">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700">
+        <link rel="stylesheet" href="https://use.typekit.net/tul3rwt.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+              integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+              crossorigin="anonymous">
         {% block stylesheet %}{% endblock %}
 
         {# Title #}
@@ -25,15 +28,46 @@
         {# Grid skeleton #}
         <div class="grid">
             {# Sidebar #}
-            <aside class="sidebar"></aside>
+            <aside class="sidebar">
+                <div class="sidebar-wrapper">
+                    <img src="{{ asset('/assets/img/desktop/avatar/me.jpg') }}" alt="Valentin Saint-Jean"
+                         class="sidebar-avatar">
+
+                    <nav class="sidebar-nav">
+                        <ul class="sidebar-list">
+                            <li class="sidebar-item">
+                                <a href="{{ '#home' }}" class="sidebar-link is-active">
+                                    <i class="fas fa-home"></i>Home
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="{{ '#intro' }}" class="sidebar-link">
+                                    <i class="fas fa-archive"></i>Intro
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="{{ '#works' }}" class="sidebar-link">
+                                    <i class="fas fa-archive"></i>Works
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="sidebar-footer">
+                        footer sidebar
+                    </div>
+                </div>
+            </aside>
             {# Main #}
             {% block body %}{% endblock %}
             {# Footer #}
             <footer class="footer">
-                <a href="https://fr.freepik.com/photos-vecteurs-libre/millesime">Millésime vecteur créé par freepik - fr.freepik.com</a>
+
             </footer>
         </div>
         {# Scripts #}
+        <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('assets/js/scrollspy.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

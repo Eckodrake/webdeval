@@ -7,10 +7,10 @@
     {# portfolio page #}
     <main class="portfolio">
         {# Banner #}
-        <header role="banner" class="portfolio-banner"></header>
+        <header role="banner" id="home" class="portfolio-banner"></header>
 
         {# Intro #}
-        <section class="intro">
+        <section id="intro" class="intro">
             <h1 class="intro-title">
                 Salut, mon nom est Valentin. Je crée des sites <strong>fonctionnels</strong> au
                 <strong><span lang="en" translate="no">design</span></strong> recherché.
@@ -19,7 +19,7 @@
         </section>
 
         {# Services #}
-        <section class="services">
+        <section id="works" class="services">
             <div class="services-container">
                 <div class="services-block">
                     <img src="{{ asset('/assets/img/desktop/services/design.png') }}"
@@ -63,11 +63,6 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        {# Works #}
-        <section class="works">
-
         </section>
     </main>
 {% endblock %}

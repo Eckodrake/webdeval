@@ -1,10 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 .portfolio {
-  // Default CSS
-  @include responsive(mobile) {
-    @include position(relative, null, null, null, null, null); // Position needed for the ::after
-  }
   &-banner {
     // Default CSS
     @include responsive(mobile) {
@@ -16,16 +12,6 @@
       background: url(https://via.placeholder.com/1920x1080) center / cover;
     }
   }
-  // Block appears when hover sidebar
-  &:after {
-    content: '';
-    display: block;
-    width: 0;
-    background: $bg-dark;
-    opacity: 0;
-    transition: opacity .2s ease-in; // Transition for the hover on the sidebar
-    @include position(absolute, 0, 0, 0, 0, null);
-  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -34,8 +20,9 @@
   // Default CSS
   @include responsive(mobile) {
     background: $bg-secondary;
+    color: $bg-light;
+    @include flex(null, center, center, null); // Center block in intro section
   }
-  @include flex(null, center, center, null); // Center block in intro section
 
   &-title {
     // Default CSS
@@ -57,7 +44,6 @@
   // Default CSS
   @include responsive(mobile) {
     min-height: 30vh;
-    background: $bg-white;
 
     @include flex(null, center, center, null); // Center all elements in mobile and tablet device
 
@@ -83,14 +69,14 @@
     &-container {
       padding: 0; // Remove padding from mobile device
       transform: translateY(-3.5rem); // Images up between services and intro block
-      @include grid(repeat(auto-fit, minmax(calc(61rem / 3), 1fr)), 1fr); // All block following each other
+      @include grid(repeat(auto-fit, minmax(calc(20rem / 3), 1fr)), 1fr); // All block following each other
     }
     &-block {
       display: block; // Cancel the flex on mobile device
       text-align: center; // Better text block on desktop device
     }
     &-img {
-      background: $bg-white;
+      background: $bg-light;
       border-radius: 25rem; // Block rounded
       width: 7.5rem; // 120px on mobile device
     }
@@ -111,8 +97,3 @@
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-.works {
-  min-height: 30vh;
-  background: $bg-success;
-}
