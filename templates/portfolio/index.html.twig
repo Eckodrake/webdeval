@@ -16,7 +16,10 @@
                     À propos
                 </h2>
 
-                <img src="https://via.placeholder.com/1340x400" alt="À propos" class="intro-img">
+                <div class="intro-block">
+                    <img src="{{ asset('assets/img/desktop/avatar/moi.JPG') }}" alt="À propos" class="intro-img">
+                    <div class="intro-mask"></div>
+                </div>
 
                 <p class="intro-paragraph">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque expedita explicabo illo nostrum quam
@@ -44,6 +47,30 @@
                 <h2 class="works-title">
                     Ce que j'ai fait
                 </h2>
+
+                <small class="works-small">Cliquez pour plus de détails</small>
+
+                {% for i in 1..3 %}
+                    <!--DEMO01-->
+                    <div id="animated{{ i }}">
+                        <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+                        <div class="close-animated{{ i }}">
+                            CLOSE MODAL
+                        </div>
+
+                        <div class="modal-content">
+                            Demo {{ i }}
+                        </div>
+                    </div>
+                {% endfor %}
+
+                <div class="works-grid">
+                    {% for i in 1..3 %}
+                        <a class="demo0{{ i }}" href="#animated{{ i }}">
+                            <img src="https://via.placeholder.com/430x320" alt="Travail réalisé" class="works-img">
+                        </a>
+                    {% endfor %}
+                </div>
             </div>
         </section>
     </main>

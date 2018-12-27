@@ -15,6 +15,7 @@
         {# Links #}
         <link rel="stylesheet" href="{{ asset('/assets/css/normalize.css') }}">
         <link rel="stylesheet" href="{{ asset('/assets/css/global.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
         <link rel="stylesheet" href="https://use.typekit.net/tul3rwt.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
               integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
@@ -26,7 +27,7 @@
     </head>
     <body>
         {# Grid skeleton #}
-        <div class="grid">
+        <div class="body-grid">
             {# Sidebar #}
             <aside class="sidebar">
                 <div class="sidebar-wrapper">
@@ -67,7 +68,9 @@
         </div>
         {# Scripts #}
         <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('assets/js/animatedModal.min.js') }}"></script>
         <script src="{{ asset('assets/js/scrollspy.js') }}"></script>
+        <script src="{{ asset('assets/js/main.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-.grid {
+.body-grid {
   // Default CSS
   @include responsive(mobile) {
     height: inherit; // Inherit from body
@@ -10,7 +10,7 @@
   // And add the footer on all bottom (_footer.scss)
   // Tale effectif from tablet landscape to big desktop
   @include responsive(tablet-landscape) {
-    @include grid(.3fr 1fr, 1fr auto);
+    @include grid(.3fr 1fr, 1fr auto, null);
   }
 }
 

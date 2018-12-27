@@ -31,11 +31,45 @@
     }
   }
 
+  &-block {
+    // Default CSS
+    @include responsive(mobile) {
+      height: 15rem;
+      @include position(relative, null, null, null, null, null);
+    }
+
+    @include responsive(tablet-landscape) {
+      height: 25rem; // Same width as intro-block
+    }
+  }
+
+  &-mask {
+    // Default CSS
+    @include responsive(mobile) {
+      height: inherit; // Same width as intro-block
+      background: linear-gradient(to right, rgba(#134e5e,.5), rgba(#71b280,.5));
+      border-radius: .5rem;
+      @include position(absolute, 0, 0, 0, 0, 10);
+    }
+
+    @include responsive(tablet-landscape) {
+      height: inherit; // Same width as intro-block
+    }
+  }
+
   &-img {
     // Default CSS
     @include responsive(mobile) {
-      width: 100%;
+      overflow: hidden;
       object-fit: cover;
+      width: 100%;
+      height: inherit; // Same width as intro-block
+      box-shadow: 0 0 .3rem $bg-secondary;
+      border-radius: .5rem;
+    }
+
+    @include responsive(tablet-landscape) {
+      height: inherit; // Same width as intro-block
     }
   }
 
@@ -61,6 +95,39 @@
       margin: 0 0 1rem 0;
       text-transform: uppercase;
       color: lighten($bg-dark, 10%);
+    }
+  }
+
+  &-small {
+    display: block;
+    margin: .5rem 0;
+    font-style: italic;
+    text-align: center;
+    color: lighten($bg-dark, 30%);
+  }
+
+  &-grid {
+    // Default CSS
+    @include responsive(mobile) {
+      height: inherit; // Inherit from body
+      @include grid(repeat(auto-fill, minmax(20rem, 1fr)), 1fr, .5rem);
+    }
+
+    &:hover {
+      .works-img {
+        opacity: .2;
+      }
+    }
+  }
+
+  &-img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+    transition: opacity .3s ease;
+
+    &:hover {
+      opacity: 1 !important;
     }
   }
 }
