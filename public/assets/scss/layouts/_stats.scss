@@ -1,9 +1,11 @@
 .is-active {
-  width: 100%;
-  color: $bg-dark;
-  background: $bg-primary;
-
-  &:hover {
+  @include responsive(tablet-landscape) {
+    width: 100%;
     color: $bg-dark;
+    background: $bg-primary;
+
+    &:hover {
+      color: $bg-dark;
+    }
   }
 }

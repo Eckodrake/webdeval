@@ -63,6 +63,8 @@
       display: block; // Better link block
       color: inherit; // Inherit from is-active or not
       padding: 1rem 2.5rem; // Link position
+      letter-spacing: .15rem;
+      text-transform: uppercase;
 
       &:not(.is-active):hover {
         color: $bg-primary;
@@ -75,16 +77,6 @@
     @include responsive(tablet-landscape) {
       margin: auto; // Better footer position
       @include position(relative, null, null, null, null, null);
-
-      &:before {
-        content: '';
-        display: block;
-        height: .1rem;
-        margin: 1rem 0;
-        background: $bg-secondary;
-
-        @include position(absolute, -3.1rem, -4.5rem, null, -4.5rem, null);
-      }
     }
   }
 

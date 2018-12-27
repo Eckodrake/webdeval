@@ -11,57 +11,39 @@
 
         {# Intro #}
         <section id="intro" class="intro">
-            <h1 class="intro-title">
-                Salut, mon nom est Valentin. Je crée des sites <strong>fonctionnels</strong> au
-                <strong><span lang="en" translate="no">design</span></strong> recherché.
-                Voici les services principaux que je fournis :
-            </h1>
+            <div class="container">
+                <h2 class="intro-title">
+                    À propos
+                </h2>
+
+                <img src="https://via.placeholder.com/1340x400" alt="À propos" class="intro-img">
+
+                <p class="intro-paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque expedita explicabo illo nostrum quam
+                    sequi similique! Ad aliquam architecto culpa ducimus eligendi error facere harum in molestiae neque,
+                    nobis, officiis repellat soluta tempora voluptate. Animi atque delectus, dignissimos earum enim esse
+                    illum, ipsum, natus officia quaerat reiciendis unde. A dignissimos dolor esse, ex impedit, ipsa
+                    iusto laudantium necessitatibus nihil non, pariatur praesentium rerum sequi similique ut.
+                    Accusantium consectetur culpa nostrum possimus quo rem sapiente, similique tenetur? Accusantium
+                    alias assumenda dolor dolore et exercitationem harum illo itaque libero magnam nulla optio placeat
+                    porro praesentium quam quisquam, sit veniam voluptatem. Accusantium ad delectus dolorem enim ipsa
+                    odio recusandae repudiandae sit. Consequuntur dolorem eius impedit laborum libero officiis quaerat,
+                    quidem? Illo, quis, voluptatibus?
+                </p>
+            </div>
         </section>
 
-        {# Services #}
-        <section id="works" class="services">
-            <div class="services-container">
-                <div class="services-block">
-                    <img src="{{ asset('/assets/img/desktop/services/design.png') }}"
-                         srcset="{{ asset('/assets/img/mobile/services/design-small.png') }} 1x, {{ asset('/assets/img/desktop/services/design.png') }} 2x"
-                         alt="Ampoule de créativité"
-                         class="services-img">
-                    <div>
-                        <h2 class="services-title"><span lang="en" translate="no">Design</span></h2>
-                        <p class="services-paragraph">
-                            Un <span lang="en" translate="no">design</span> adapté pour vous ou votre public.
-                            Les <span lang="en" translate="no">canvas</span> sont fournis en modèle mobile et
-                            <span lang="en" translate="no">desktop</span> pour une
-                            <span lang="en" translate="no">responsive</span> optimale.
-                        </p>
-                    </div>
-                </div>
-                <div class="services-block">
-                    <img src="{{ asset('/assets/img/desktop/services/development.png') }}"
-                         srcset="{{ asset('/assets/img/mobile/services/development-small.png') }} 1x, {{ asset('/assets/img/desktop/services/development.png') }} 2x"
-                         alt="Rouage de développement"
-                         class="services-img">
-                    <div>
-                        <h2 class="services-title">Développement</h2>
-                        <p class="services-paragraph">
-                            Un site optimal est un site en bonne santé. <span lang="en" translate="no">Responsive</span>,
-                            sécurisé, référencé et mis à jour sont les piliers du développement proposé.
-                        </p>
-                    </div>
-                </div>
-                <div class="services-block">
-                    <img src="{{ asset('/assets/img/desktop/services/social.png') }}"
-                         srcset="{{ asset('/assets/img/mobile/services/social-small.png') }} 1x, {{ asset('/assets/img/desktop/services/social.png') }} 2x"
-                         alt="Télescope du social"
-                         class="services-img">
-                    <div>
-                        <h2 class="services-title">Social</h2>
-                        <p class="services-paragraph">
-                            Rallier le Monde à votre cause sur les réseaux sociaux, c'est important.
-                            Que ce soit en affichant votre marque ou en rédaction.
-                        </p>
-                    </div>
-                </div>
+        {# Separator #}
+        <div class="container">
+            <hr class="separator">
+        </div>
+
+        {# Works #}
+        <section id="works" class="works">
+            <div class="container">
+                <h2 class="works-title">
+                    Ce que j'ai fait
+                </h2>
             </div>
         </section>
     </main>

@@ -1,0 +1,12 @@
+.container {
+  // Default CSS
+  @include responsive(mobile) {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  // Tablet horizontal CSS
+  @include responsive(tablet-landscape) {
+    width: 70vw;
+  }
+}

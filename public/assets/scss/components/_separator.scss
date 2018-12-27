@@ -1,0 +1,8 @@
+hr.separator {
+  // Default CSS
+  @include responsive(mobile) {
+    border: none;
+    height: .06rem;
+    background-image: linear-gradient(to right, $bg-light, $bg-secondary, $bg-dark, $bg-secondary, $bg-light);
+  }
+}
