@@ -3,8 +3,11 @@
 .footer {
   // Default CSS
   @include responsive(mobile) {
+    min-height: 10vh;
+    background: $bg-dark;
     grid-column: 2/3; // Take max-width in grid skeleton next sidebar
   }
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+

@@ -16,7 +16,7 @@
     });
 
     $(window).scroll(function () {
-        let scrollTop = $(this).scrollTop() + ($(window).height() / 4);
+        let scrollTop = $(this).scrollTop() + ($(window).height() / 2);
         for(let i in sections) {
             let section = sections[i];
             if (scrollTop > section.offset().top) {

@@ -19,6 +19,11 @@
 .intro {
   // Default CSS
   @include responsive(mobile) {
+    margin: 2rem 0;
+  }
+
+  // Tablet horizontal
+  @include responsive(tablet-landscape) {
     margin: 3rem 0;
   }
 
@@ -38,8 +43,9 @@
       @include position(relative, null, null, null, null, null);
     }
 
+    // Tablet horizontal
     @include responsive(tablet-landscape) {
-      height: 25rem; // Same width as intro-block
+      height: 25rem;
     }
   }
 
@@ -47,7 +53,7 @@
     // Default CSS
     @include responsive(mobile) {
       height: inherit; // Same width as intro-block
-      background: linear-gradient(to right, rgba(#134e5e,.5), rgba(#71b280,.5));
+      background: linear-gradient(to right, rgba(#134e5e, .3), rgba(#71b280, .3));
       border-radius: .5rem;
       @include position(absolute, 0, 0, 0, 0, 10);
     }
@@ -68,24 +74,32 @@
       border-radius: .5rem;
     }
 
+    // Tablet horizontal
     @include responsive(tablet-landscape) {
       height: inherit; // Same width as intro-block
     }
   }
 
   &-paragraph {
-    margin: 2rem 0 0 0;
-    line-height: 1.5;
-    text-align: justify;
-    color: lighten($bg-dark, 20%);
+    @include responsive(mobile) {
+      margin: 2rem 0 0 0;
+      line-height: 1.5;
+      text-align: justify;
+      color: lighten($bg-dark, 20%);
+    }
   }
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-.works {
+.skills {
   // Default CSS
   @include responsive(mobile) {
+    margin: 2rem 0;
+  }
+
+  // Tablet horizontal
+  @include responsive(tablet-landscape) {
     margin: 3rem 0;
   }
 
@@ -98,38 +112,191 @@
     }
   }
 
+  .particles-js-canvas-el {
+    @include position(absolute, 0, 0, 0, 0, null);
+  }
+
+  &-block {
+    // Default CSS
+    @include responsive(mobile) {
+      padding: 10rem 0;
+      @include position(relative, null, null, null, null, null);
+    }
+  }
+
+  &-absolute {
+    // Default CSS
+    @include responsive(mobile) {
+      @include flex(row, space-between, center, null);
+      @include position(absolute, 0, 0, 0, 0, null);
+    }
+  }
+
+  &-margin {
+    @include responsive(mobile) {
+      width: 100%;
+      @include grid(repeat(auto-fit, minmax(5rem, 1fr)), 1fr, null);
+    }
+  }
+
+  &-section {
+    @include responsive(mobile) {
+      margin: 0 auto;
+    }
+  }
+
+  &-subtitle {
+    @include responsive(mobile) {
+      margin: 0 0 1rem 0;
+      letter-spacing: .05rem;
+      text-transform: uppercase;
+      color: lighten($bg-dark, 10%);
+    }
+  }
+
+  &-list {
+    @include responsive(mobile) {
+      list-style: none;
+      line-height: 1.5;
+    }
+  }
+
+  &-item {
+    @include responsive(mobile) {
+      margin-left: 1rem;
+      letter-spacing: .1rem;
+      transition: color .3s ease;
+      @include position(relative, null, null, null, null, 2);
+
+      &:hover {
+        color: $bg-secondary;
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.works {
+  // Default CSS
+  @include responsive(mobile) {
+    margin: 2rem 0;
+  }
+
+  // Tablet horizontal
+  @include responsive(tablet-landscape) {
+    margin: 3rem 0;
+  }
+
+  &-title {
+    // Default CSS
+    @include responsive(mobile) {
+      margin: 0 0 1rem 0;
+      text-transform: uppercase;
+      color: lighten($bg-dark, 10%);
+    }
+  }
+
+  &-subtitle {
+    // Default CSS
+    @include responsive(mobile) {
+      margin: 1rem 1rem;
+      letter-spacing: .05rem;
+      text-transform: uppercase;
+      color: lighten($bg-dark, 10%);
+    }
+
+    // Tablet horizontal
+    @include responsive(tablet-landscape) {
+      margin: 2rem 2rem;
+    }
+
+    &:before {
+      @include responsive(mobile) {
+        content: '';
+        display: inline-block;
+        width: .5rem;
+        height: .5rem;
+        margin: .25rem 0;
+        border-bottom: .1rem solid $bg-dark;
+      }
+    }
+
+    &:after {
+      @include responsive(mobile) {
+        content: '';
+        display: inline-block;
+        width: .5rem;
+        height: .5rem;
+        margin: .25rem 0;
+        border-bottom: .1rem solid $bg-dark;
+      }
+    }
+  }
+
   &-small {
-    display: block;
-    margin: .5rem 0;
-    font-style: italic;
-    text-align: center;
-    color: lighten($bg-dark, 30%);
+    @include responsive(mobile) {
+      display: block;
+      margin: .5rem 0;
+      font-style: italic;
+      text-align: center;
+      color: lighten($bg-dark, 30%);
+    }
   }
 
   &-grid {
     // Default CSS
     @include responsive(mobile) {
       height: inherit; // Inherit from body
+      @include grid(repeat(auto-fill, minmax(10rem, 1fr)), 1fr, .5rem);
+    }
+
+    // Tablet vertical
+    @include responsive(tablet-portrait) {
+      height: inherit; // Inherit from body
+      @include grid(repeat(auto-fill, minmax(18rem, 1fr)), 1fr, .5rem);
+    }
+
+    // Tablet horizontal
+    @include responsive(tablet-landscape) {
+      height: inherit; // Inherit from body
+      @include grid(repeat(auto-fill, minmax(15rem, 1fr)), 1fr, .5rem);
+    }
+
+    // Desktop CSS
+    @include responsive(desktop) {
+      height: inherit; // Inherit from body
       @include grid(repeat(auto-fill, minmax(20rem, 1fr)), 1fr, .5rem);
     }
 
     &:hover {
       .works-img {
-        opacity: .2;
+        // Default CSS
+        @include responsive(mobile) {
+          opacity: .2;
+        }
       }
     }
   }
 
   &-img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: .5rem;
-    transition: opacity .3s ease;
+    @include responsive(mobile) {
+      width: 100%;
+      object-fit: cover;
+      border-radius: .5rem;
+      transition: opacity .3s ease;
+    }
 
     &:hover {
-      opacity: 1 !important;
+      @include responsive(mobile) {
+        opacity: 1 !important;
+      }
     }
   }
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.contact {
+  min-height: 30vh;
+}

@@ -19,15 +19,13 @@
     }
 
     @include responsive(tablet-landscape) {
-      @include grid(repeat(auto-fit, 1fr), .1fr auto .1fr, null); // Grid for elements in wrapper sidebar
+      @include grid(repeat(auto-fit, 1fr), .1fr auto .05fr, null); // Grid for elements in wrapper sidebar
     }
   }
 
   &-avatar {
     @include responsive(tablet-landscape) {
       margin: 2.5rem auto; // Image position
-      border-radius: .5rem; // Rounded image
-      box-shadow: 0 0 .3rem $bg-secondary; // Small image border
     }
   }
 
@@ -75,8 +73,12 @@
 
   &-footer {
     @include responsive(tablet-landscape) {
-      margin: auto; // Better footer position
+      @include flex(row, center, center, null);
       @include position(relative, null, null, null, null, null);
+
+      .fab {
+        margin: 0 1rem;
+      }
     }
   }
 

@@ -2,6 +2,8 @@
   // Default CSS
   @include responsive(mobile) {
     width: 90vw;
+    height: inherit;
+    min-height: inherit;
     margin: 0 auto;
   }
 

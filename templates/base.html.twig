@@ -31,31 +31,39 @@
             {# Sidebar #}
             <aside class="sidebar">
                 <div class="sidebar-wrapper">
-                    <img src="{{ asset('/assets/img/desktop/avatar/me.jpg') }}" alt="Valentin Saint-Jean"
+                    <img src="{{ asset('/assets/img/desktop/avatar/logo.png') }}" alt="Webdeval logo"
                          class="sidebar-avatar">
+
 
                     <nav class="sidebar-nav">
                         <ul role="menu" class="sidebar-list">
                             <li class="sidebar-item">
                                 <a href="{{ '#home' }}" class="sidebar-link is-active">
-                                    <i class="fas fa-home"></i>Home
+                                    <i class="fas fa-home"></i>Accueil
                                 </a>
                             </li>
                             <li class="sidebar-item">
                                 <a href="{{ '#intro' }}" class="sidebar-link">
-                                    <i class="fas fa-archive"></i>Intro
+                                    <i class="fas fa-archive"></i>Introduction
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="{{ '#skills' }}" class="sidebar-link">
+                                    <i class="fas fa-archive"></i>Compétences
                                 </a>
                             </li>
                             <li class="sidebar-item">
                                 <a href="{{ '#works' }}" class="sidebar-link">
-                                    <i class="fas fa-archive"></i>Travaux
+                                    <i class="fas fa-archive"></i>Portfolio
                                 </a>
                             </li>
                         </ul>
                     </nav>
 
                     <div class="sidebar-footer">
-                        footer sidebar
+                        <a href="" target="_blank"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="" target="_blank"><i class="fab fa-twitter-square fa-lg"></i></a>
+                        <a href="" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
                     </div>
                 </div>
             </aside>
@@ -70,6 +78,7 @@
         <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
         <script src="{{ asset('assets/js/animatedModal.min.js') }}"></script>
         <script src="{{ asset('assets/js/scrollspy.js') }}"></script>
+        <script src="{{ asset('assets/js/particles.min.js') }}"></script>
         <script src="{{ asset('assets/js/main.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>
