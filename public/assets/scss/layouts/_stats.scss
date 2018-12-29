@@ -9,3 +9,23 @@
     }
   }
 }
+
+.is-show {
+  @include responsive(mobile) {
+    display: block;
+  }
+  @include responsive(tablet-landscape) {
+    display: inherit;
+  }
+}
+
+.is-hide {
+  @include responsive(mobile) {
+    display: none;
+  }
+
+  @include responsive(tablet-landscape) {
+    display: inherit;
+  }
+}
+

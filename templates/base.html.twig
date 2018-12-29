@@ -26,14 +26,26 @@
         <title>{% block title '' %} ~ Webdeval</title>
     </head>
     <body>
+        {% for message in app.flashes('success') %}
+            <div id="flash" class="message-flash"><h3>{{ message }}</h3></div>
+        {% endfor %}
+
+        {% if not form.vars.valid %}
+            <div id="flash" class="message-flash"><h3>Champs de contact mal complétés</h3></div>
+        {% endif %}
+
         {# Grid skeleton #}
         <div class="body-grid">
             {# Sidebar #}
             <aside class="sidebar">
-                <div class="sidebar-wrapper">
+
+                <button type="button" id="sidebar-button" class="sidebar-button">
+                    <i class="fas fa-bars fa-3x"></i>
+                </button>
+
+                <div id="sidebar-wrapper" class="sidebar-wrapper is-hide">
                     <img src="{{ asset('/assets/img/desktop/avatar/logo.png') }}" alt="Webdeval logo"
                          class="sidebar-avatar">
-
 
                     <nav class="sidebar-nav">
                         <ul role="menu" class="sidebar-list">

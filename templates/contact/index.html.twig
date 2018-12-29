@@ -1,0 +1,59 @@
+<style type="text/css">
+    .header {
+        background: #8a8a8a;
+    }
+    .header .columns {
+        padding-bottom: 0;
+    }
+    .header p {
+        color: #fff;
+        margin-bottom: 0;
+    }
+    .header .wrapper-inner {
+        padding: 20px; /*controls the height of the header*/
+    }
+    .header .container {
+        background: #8a8a8a;
+    }
+    .wrapper.secondary {
+        background: #f3f3f3;
+    }
+</style>
+<!-- move the above styles into your custom stylesheet -->
+
+
+<wrapper class="header" bgcolor="#8a8a8a">
+    <container>
+        <row class="collapse">
+            <columns small="6" valign="middle">
+                <p class="text-right">{{ contact.subject }}</p>
+            </columns>
+        </row>
+    </container>
+</wrapper>
+
+<container>
+
+    <spacer size="16"></spacer>
+
+    <row>
+        <columns>
+
+            <h1>{{ contact.subject }}</h1>
+            <p class="lead">{{ contact.message }}</p>
+
+        </columns>
+    </row>
+
+    <wrapper class="secondary">
+        <spacer size="16"></spacer>
+        <row>
+            <columns small="12" large="6">
+                <h5>Contact Info:</h5>
+                <p>Nom : {{ contact.name }}</p>
+                <p>Email : {{ contact.email }}</p>
+            </columns>
+        </row>
+    </wrapper>
+
+</container>

@@ -57,6 +57,7 @@
                                     <li class="skills-item">JavaScript ES6</li>
                                     <li class="skills-item">CSS 3 / SCSS</li>
                                     <li class="skills-item">HTML 5</li>
+                                    <li class="skills-item">mySQL</li>
                                     <li class="skills-item">PHP 7</li>
                                 </ul>
                             </div>
@@ -158,6 +159,34 @@
         </div>
 
         {# Contact #}
-        <section id="contact" class="contact"></section>
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="contact-title">
+                    Me contacter
+                </h2>
+
+                {{ form_start(form) }}
+                <div class="contact-grid">
+                    <div class="contact-name">
+                        {{ form_label(form.name) }}
+                        {{ form_widget(form.name) }}
+                    </div>
+                    <div class="contact-email">
+                        {{ form_label(form.email) }}
+                        {{ form_widget(form.email) }}
+                    </div>
+                    <div class="contact-subject">
+                        {{ form_label(form.subject) }}
+                        {{ form_widget(form.subject) }}
+                    </div>
+                    <div class="contact-message">
+                        {{ form_label(form.message) }}
+                        {{ form_widget(form.message) }}
+                    </div>
+                    <button type="submit" class="contact-submit">Envoyer</button>
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </section>
     </main>
 {% endblock %}

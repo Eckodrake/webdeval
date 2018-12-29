@@ -1,0 +1,9 @@
+.message-flash {
+  cursor: pointer;
+  padding: 2rem auto;
+  color: $bg-dark;
+  background: $bg-secondary;
+  text-align: center;
+  letter-spacing: .01rem;
+  @include position(fixed, 0, 0, null, 0, 11);
+}
