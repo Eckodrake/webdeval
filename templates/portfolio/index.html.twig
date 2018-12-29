@@ -167,24 +167,25 @@
 
                 {{ form_start(form) }}
                 <div class="contact-grid">
-                    <div class="contact-name">
-                        {{ form_label(form.name) }}
+                    <div class="contact-group">
+                        <span class="contact-label">{{ form_label(form.name) }}</span>
                         {{ form_widget(form.name) }}
                     </div>
-                    <div class="contact-email">
-                        {{ form_label(form.email) }}
+                    <div class="contact-group">
+                        <span class="contact-label">{{ form_label(form.email) }}</span>
                         {{ form_widget(form.email) }}
                     </div>
-                    <div class="contact-subject">
-                        {{ form_label(form.subject) }}
+                    <div class="contact-group">
+                        <span class="contact-label">{{ form_label(form.subject) }}</span>
                         {{ form_widget(form.subject) }}
                     </div>
-                    <div class="contact-message">
-                        {{ form_label(form.message) }}
-                        {{ form_widget(form.message) }}
-                    </div>
-                    <button type="submit" class="contact-submit">Envoyer</button>
                 </div>
+                <div class="contact-group">
+                    <span class="contact-label">{{ form_label(form.message) }}</span>
+                    {{ form_widget(form.message) }}
+                </div>
+
+                <button type="submit" class="contact-submit">Contacter</button>
                 {{ form_end(form) }}
             </div>
         </section>

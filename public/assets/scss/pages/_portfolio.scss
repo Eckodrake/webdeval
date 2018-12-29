@@ -318,15 +318,102 @@
   }
 
   &-grid {
-    @include grid(repeat(auto-fit, minmax(10rem, 1fr)), 1fr, null);
+    @include responsive(mobile) {
+      margin-bottom: 1rem;
+      @include grid(repeat(auto-fit, minmax(30%, 1fr)), 1fr, 1rem);
+    }
   }
 
-  &-messsage {
-    width: 100%;
-    grid-column: 1/3;
+  &-group {
+    @include responsive(mobile) {
+      width: 100%;
+      @include flex(row, center, center, null);
+    }
+  }
+
+  &-label {
+    @include responsive(mobile) {
+      display: none;
+    }
+  }
+
+  &-input {
+    @include responsive(mobile) {
+      color: lighten($bg-dark, 30%);
+      width: 100%;
+      outline: none;
+      padding: .5rem;
+      background: $bg-light;
+      border: .01rem solid lighten($bg-dark, 30%);
+      transition: border .3s ease;
+    }
+
+    &:required:focus:valid {
+      @include responsive(mobile) {
+        border: .01rem solid $bg-success;
+      }
+    }
+
+    &:required:focus:invalid {
+      @include responsive(mobile) {
+        border: .01rem solid $bg-warning;
+      }
+    }
+
+    &:focus {
+      @include responsive(mobile) {
+        border: .01rem solid $bg-secondary;
+      }
+    }
+  }
+
+  &-area {
+    @include responsive(mobile) {
+      color: lighten($bg-dark, 30%);
+      min-height: 10vh;
+      min-width: 50%;
+      width: 100%;
+      outline: none;
+      padding: .5rem;
+      margin-bottom: 1rem;
+      background: $bg-light;
+      border: .01rem solid lighten($bg-dark, 30%);
+      transition: border .3s ease;
+    }
+
+    &:required:focus:valid {
+      @include responsive(mobile) {
+        border: .01rem solid $bg-success;
+      }
+    }
+
+    &:required:focus:invalid {
+      @include responsive(mobile) {
+        border: .01rem solid $bg-warning;
+      }
+    }
+
+    &:focus {
+      @include responsive(mobile) {
+        border: .01rem solid $bg-secondary;
+      }
+    }
   }
 
   &-submit {
-    grid-column: 1/2;
+    @include responsive(mobile) {
+      text-transform: uppercase;
+      background: $bg-primary;
+      border: none;
+      padding: .5rem 1rem;
+      cursor: pointer;
+      transition: .3s ease;
+    }
+
+    &:hover {
+      @include responsive(mobile) {
+        background: $bg-secondary;
+      }
+    }
   }
 }
