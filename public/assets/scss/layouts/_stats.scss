@@ -15,7 +15,7 @@
     display: block;
   }
   @include responsive(tablet-landscape) {
-    display: inherit;
+    display: inherit !important;
   }
 }
 
@@ -25,7 +25,7 @@
   }
 
   @include responsive(tablet-landscape) {
-    display: inherit;
+    display: inherit !important;
   }
 }
 

@@ -83,7 +83,7 @@
   &-paragraph {
     @include responsive(mobile) {
       margin: 2rem 0 0 0;
-      line-height: 1.5;
+      line-height: 1.4;
       text-align: justify;
       color: lighten($bg-dark, 20%);
     }

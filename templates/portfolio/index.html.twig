@@ -22,16 +22,12 @@
                 </div>
 
                 <p class="intro-paragraph">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque expedita explicabo illo nostrum quam
-                    sequi similique! Ad aliquam architecto culpa ducimus eligendi error facere harum in molestiae neque,
-                    nobis, officiis repellat soluta tempora voluptate. Animi atque delectus, dignissimos earum enim esse
-                    illum, ipsum, natus officia quaerat reiciendis unde. A dignissimos dolor esse, ex impedit, ipsa
-                    iusto laudantium necessitatibus nihil non, pariatur praesentium rerum sequi similique ut.
-                    Accusantium consectetur culpa nostrum possimus quo rem sapiente, similique tenetur? Accusantium
-                    alias assumenda dolor dolore et exercitationem harum illo itaque libero magnam nulla optio placeat
-                    porro praesentium quam quisquam, sit veniam voluptatem. Accusantium ad delectus dolorem enim ipsa
-                    odio recusandae repudiandae sit. Consequuntur dolorem eius impedit laborum libero officiis quaerat,
-                    quidem? Illo, quis, voluptatibus?
+                    Salut, moi c'est Valentin. Passionné par les nouvelles technologies, j'ai tracé ma route dans le web
+                    développement – et le design à mes heures perdues – pour en arriver ici. Spécialisé dans le
+                    <span lang="en" translate="no">front-end</span>, je développe des sites modernes et adaptatifs pour
+                    des petits et gros projets. J'ai une sérieuse fascination pour les effets UI, les animations ainsi
+                    que la création d'expériences utilisateur intuitive et dynamique. En dehors de la programmation,
+                    on peut me trouver en train d'écrire, faire du jeu de rôle, voyager ou refaire le Monde entr'amis.
                 </p>
             </div>
         </section>
@@ -121,10 +117,11 @@
                                     </div>
 
                                     <div class="modal-content">
-                                        <img src="{{ asset('/assets/img/desktop/works/' ~ design.img) }}" alt="Développement"
+                                        <img src="{{ asset('/assets/img/desktop/works/' ~ design.img) }}"
+                                             alt="Développement"
                                              class="modal-img">
                                         <h1 class="modal-title">{{ design.title | raw }}</h1>
-                                        <p class="modal-paragraph">{{ design.description }}</p>
+                                        <p class="modal-paragraph">{{ design.description | raw | nl2br }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -153,10 +150,11 @@
                                     </div>
 
                                     <div class="modal-content">
-                                        <img src="{{ asset('/assets/img/desktop/works/' ~ development.img) }}" alt="Développement"
+                                        <img src="{{ asset('/assets/img/desktop/works/' ~ development.img) }}"
+                                             alt="Développement"
                                              class="modal-img">
                                         <h1 class="modal-title">{{ development.title | raw }}</h1>
-                                        <p class="modal-paragraph">{{ development.description }}</p>
+                                        <p class="modal-paragraph">{{ development.description | raw | nl2br }}</p>
                                         <hr class="modal-separator">
                                         <div>
                                             <span>Accéder à la source :</span>

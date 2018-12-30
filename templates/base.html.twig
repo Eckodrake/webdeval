@@ -6,11 +6,19 @@
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta http-equiv="refresh" content="300">
         <meta name="keywords"
               content="HTML,CSS,PHP,JS,JavaScript,portfolio,blog,design,developer,code,symfony,webdeval">
         <meta name="author" content="Valentin Saint-Jean">
         <meta name="description" content="Portfolio et blog de Valentin Saint-Jean">
+
+        {# Favicon #}
+        <meta name="msapplication-TileColor" content="#f5f6f4">
+        <meta name="theme-color" content="#f5f6f4">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('assets/icon/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/icon/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/icon/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ asset('assets/icon/site.webmanifest') }}">
+        <link rel="mask-icon" href="{{ asset('assets/icon/safari-pinned-tab.svg') }}" color="#f5f6f4">
 
         {# Links #}
         <link rel="stylesheet" href="{{ asset('/assets/css/normalize.css') }}">
@@ -87,8 +95,9 @@
             {# Main #}
             {% block body %}{% endblock %}
             {# Footer #}
+            <div class="footer-design"></div>
             <footer class="footer">
-
+                Copyright Webdeval 2019 &copy;
             </footer>
         </div>
         {# Scripts #}

@@ -27,10 +27,49 @@
 }
 
 @media only screen and (min-width: 0) {
+  .footer-design {
+    min-height: 5vh;
+    background: #9DA596;
+  }
+  @supports ((-webkit-clip-path: polygon(0 0, 0 100%, 70% 100%)) or (clip-path: polygon(0 0, 0 100%, 70% 100%))) {
+    .footer-design {
+      -webkit-clip-path: polygon(0 50%, 0 100%, 100% 100%);
+              clip-path: polygon(0 50%, 0 100%, 100% 100%);
+    }
+  }
+}
+@media only screen and (min-width: 56.25em) {
+  @supports ((-webkit-clip-path: polygon(0 0, 0 100%, 70% 100%)) or (clip-path: polygon(0 0, 0 100%, 70% 100%))) {
+    .footer-design {
+      -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%);
+              clip-path: polygon(0 0, 0 100%, 100% 100%);
+    }
+  }
+}
+
+@media only screen and (min-width: 0) {
   .footer {
-    min-height: 25vh;
-    background: #2B3938;
+    min-height: 5vh;
+    background: #9DA596;
     grid-column: 2/3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media only screen and (min-width: 56.25em) {
+  .footer {
+    min-height: 10vh;
   }
 }
 
@@ -73,7 +112,7 @@ hr.modal-separator {
 }
 @media only screen and (min-width: 56.25em) {
   .sidebar {
-    grid-row: 1/3;
+    grid-row: 1/4;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -306,7 +345,7 @@ hr.modal-separator {
 }
 @media only screen and (min-width: 56.25em) {
   .is-show {
-    display: inherit;
+    display: inherit !important;
   }
 }
 
@@ -317,7 +356,7 @@ hr.modal-separator {
 }
 @media only screen and (min-width: 56.25em) {
   .is-hide {
-    display: inherit;
+    display: inherit !important;
   }
 }
 
@@ -400,7 +439,7 @@ hr.modal-separator {
 @media only screen and (min-width: 0) {
   .intro-paragraph {
     margin: 2rem 0 0 0;
-    line-height: 1.5;
+    line-height: 1.4;
     text-align: justify;
     color: #577371;
   }
