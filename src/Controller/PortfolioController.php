@@ -3,8 +3,10 @@
 namespace App\Controller;
 
 use App\Entity\Contact;
+use App\Entity\Work;
 use App\Form\ContactType;
 use App\Notifications\ContactNotification;
+use App\Repository\WorkRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -16,10 +18,14 @@ class PortfolioController extends AbstractController
      * @Route("/", name="portfolio.index")
      * @param Request $request
      * @param ContactNotification $notification
+     * @param WorkRepository $repository
      * @return Response
      */
-    public function index(Request $request, ContactNotification $notification): Response
+    public function index(Request $request, ContactNotification $notification, WorkRepository $repository): Response
     {
+        $development = $repository->findBy(['type' => 'développement']);
+        $design = $repository->findBy(['type' => 'design']);
+
         $contact = new Contact();
         $form = $this->createForm(ContactType::class, $contact);
         $form->handleRequest($request);
@@ -32,6 +38,8 @@ class PortfolioController extends AbstractController
         endif;
 
         return $this->render('portfolio/index.html.twig', [
+            'developments' => $development,
+            'designs' => $design,
             'form' => $form->createView()
         ]);
     }

@@ -6,3 +6,10 @@ hr.separator {
     background-image: linear-gradient(to right, $bg-light, $bg-secondary, $bg-dark, $bg-secondary, $bg-light);
   }
 }
+
+hr.modal-separator {
+  border: none;
+  height: .06rem;
+  margin: 1rem 0;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, .1), $bg-secondary, $bg-primary, $bg-secondary, rgba(0, 0, 0, .1));
+}

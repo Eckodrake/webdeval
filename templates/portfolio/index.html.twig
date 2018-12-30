@@ -74,9 +74,10 @@
                             <div class="skills-section">
                                 <h3 class="skills-subtitle">Outils</h3>
                                 <ul class="skills-list">
+                                    <li class="skills-item">PhotoShop</li>
                                     <li class="skills-item">Composer</li>
-                                    <li class="skills-item">Twig</li>
                                     <li class="skills-item">Gulp</li>
+                                    <li class="skills-item">Twig</li>
                                     <li class="skills-item">Npm</li>
                                     <li class="skills-item">Git</li>
                                 </ul>
@@ -99,43 +100,35 @@
                     Ce que j'ai fait
                 </h2>
 
-                {# Modal développement #}
-                {% for i in 1..3 %}
-                    <div id="development{{ i }}">
-                        {# Modal close has to get the same id #}
-                        <div class="close-development{{ i }}">
-                            CLOSE MODAL
-                        </div>
-
-                        <div class="modal-content">
-                            Développement {{ i }}
-                        </div>
-                    </div>
-                {% endfor %}
-
-                {# Modal design #}
-                {% for i in 1..3 %}
-                    <div id="design{{ i }}">
-                        {# Modal close has to get the same id #}
-                        <div class="close-design{{ i }}">
-                            CLOSE MODAL
-                        </div>
-
-                        <div class="modal-content">
-                            Design {{ i }}
-                        </div>
-                    </div>
-                {% endfor %}
-
                 <h3 class="works-subtitle">Design</h3>
 
                 <small class="works-small">Cliquez pour plus de détails</small>
 
                 <div class="works-grid">
-                    {% for i in 1..3 %}
-                        <a class="design0{{ i }}" href="#design{{ i }}">
-                            <img src="https://via.placeholder.com/430x320" alt="Travail réalisé" class="works-img">
+                    {% for design in designs %}
+                        <a class="modal{{ design.id }} modal-js" href="#modal{{ design.id }}">
+                            <img src="{{ asset('/assets/img/desktop/works/' ~ design.img) }}" alt="Design"
+                                 class="works-img">
                         </a>
+
+                        {# Modal design #}
+                        <div id="modal{{ design.id }}">
+                            <div class="container">
+                                <div class="modal">
+                                    {# Modal close has to get the same id #}
+                                    <div class="close-modal{{ design.id }}">
+                                        <i class="far fa-times-circle fa-3x modal-close"></i>
+                                    </div>
+
+                                    <div class="modal-content">
+                                        <img src="{{ asset('/assets/img/desktop/works/' ~ design.img) }}" alt="Développement"
+                                             class="modal-img">
+                                        <h1 class="modal-title">{{ design.title | raw }}</h1>
+                                        <p class="modal-paragraph">{{ design.description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     {% endfor %}
                 </div>
 
@@ -144,10 +137,37 @@
                 <small class="works-small">Cliquez pour plus de détails</small>
 
                 <div class="works-grid">
-                    {% for i in 1..3 %}
-                        <a class="dev0{{ i }}" href="#development{{ i }}">
-                            <img src="https://via.placeholder.com/430x320" alt="Travail réalisé" class="works-img">
+                    {% for development in developments %}
+                        <a class="modal{{ development.id }} modal-js" href="#modal{{ development.id }}">
+                            <img src="{{ asset('/assets/img/desktop/works/' ~ development.img) }}" alt="Développement"
+                                 class="works-img">
                         </a>
+
+                        {# Modal développement #}
+                        <div id="modal{{ development.id }}">
+                            <div class="container">
+                                <div class="modal">
+                                    {# Modal close has to get the same id #}
+                                    <div class="close-modal{{ development.id }}">
+                                        <i class="far fa-times-circle fa-3x modal-close"></i>
+                                    </div>
+
+                                    <div class="modal-content">
+                                        <img src="{{ asset('/assets/img/desktop/works/' ~ development.img) }}" alt="Développement"
+                                             class="modal-img">
+                                        <h1 class="modal-title">{{ development.title | raw }}</h1>
+                                        <p class="modal-paragraph">{{ development.description }}</p>
+                                        <hr class="modal-separator">
+                                        <div>
+                                            <span>Accéder à la source :</span>
+                                            <a href="{{ 'http://' ~ development.link }}" title="Accéder à la source"
+                                               target="_blank">{{ development.link }}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     {% endfor %}
                 </div>
             </div>

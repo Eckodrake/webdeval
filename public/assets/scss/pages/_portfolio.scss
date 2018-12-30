@@ -120,6 +120,7 @@
     // Default CSS
     @include responsive(mobile) {
       padding: 10rem 0;
+      overflow: hidden;
       @include position(relative, null, null, null, null, null);
     }
   }
@@ -174,6 +175,49 @@
     }
   }
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.modal {
+  color: $bg-light;
+  padding: 5rem 0;
+  @include flex(column, null, center, null);
+
+  &-close {
+    color: inherit;
+    cursor: pointer;
+    margin: 1rem auto;
+    transition: color .3s ease;
+
+    &:hover {
+      color: $bg-primary;
+    }
+  }
+
+  &-img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &-title {
+    margin: 1rem 0;
+    letter-spacing: .1rem;
+  }
+
+  &-content {
+    width: 100%;
+    @include flex(column, null, null, null);
+  }
+
+  &-paragraph {
+    text-align: justify;
+    line-height: 1.5;
+    letter-spacing: .05rem;
+    column-count: 2;
+    column-gap: 2rem;
+  }
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

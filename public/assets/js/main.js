@@ -1,21 +1,19 @@
 // Modal popup
 (function ($) {
-    for (let i = 1; i <= 3; i++) {
-        $('.dev0' + i).animatedModal({
+    const item = $('.modal-js');
+
+    item.each(function (index) {
+        let id = index + 1;
+
+        $('.modal' + id).animatedModal({
             color: 'rgba(0, 0, 0, .9)',
-            overflow: 'hidden',
+            overflow: 'auto',
             animatedIn: 'slideInDown',
             animatedOut: 'slideOutUp',
             animationDuration: '1s'
         });
-        $('.design0' + i).animatedModal({
-            color: 'rgba(0, 0, 0, .9)',
-            overflow: 'hidden',
-            animatedIn: 'slideInDown',
-            animatedOut: 'slideOutUp',
-            animationDuration: '1s'
-        });
-    }
+    });
+
 })(jQuery); // End Modal popup
 
 // Mobil nav
@@ -26,15 +24,14 @@
     button.click(function () {
         if (wrapper.hasClass('is-hide')) {
             wrapper.slideDown('slow').removeClass('is-hide').addClass('is-show');
-        }
-        else if (wrapper.hasClass('is-show')) {
+        } else if (wrapper.hasClass('is-show')) {
             wrapper.slideUp('slow').removeClass('is-show').addClass('is-hide');
         }
     });
 
 })(jQuery); // End Mobil nav
 
-// Mobil nav
+// Flash message
 (function ($) {
     let flash = $('#flash');
 
@@ -42,12 +39,12 @@
         $(this).slideUp('slow');
     });
 
-})(jQuery); // End Mobil nav
+})(jQuery); // End Flash message
 
 // Particles
 (function () {
     /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-    particlesJS.load('particles', '/assets/json/particles-config.json', function() {
+    particlesJS.load('particles', '/assets/json/particles-config.json', function () {
         console.log('callback - particles.js config loaded');
     });
 })(); // End Particles
