@@ -55,10 +55,10 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -67,6 +67,19 @@
             align-items: center;
   }
 }
+@media only screen and (min-width: 0) and (min-width: 0) {
+  .footer-link {
+    color: #4c6563;
+    -webkit-transition: color .3s ease;
+    transition: color .3s ease;
+  }
+}
+@media only screen and (min-width: 0) and (min-width: 0) {
+  .footer-link:hover {
+    color: #A49378;
+  }
+}
+
 @media only screen and (min-width: 56.25em) {
   .footer {
     min-height: 10vh;
@@ -264,6 +277,27 @@ hr.modal-separator {
   }
 }
 
+@-webkit-keyframes grow {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes grow {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
 @media only screen and (min-width: 0) {
   html {
     font-size: 62.5%;
@@ -362,14 +396,82 @@ hr.modal-separator {
 
 @media only screen and (min-width: 0) {
   .portfolio-banner {
+    overflow: hidden;
     min-height: 65vh;
-    background: url(https://via.placeholder.com/1200x1080) center/cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    position: relative;
   }
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 112.5em) {
-  .portfolio-banner {
-    background: url(https://via.placeholder.com/1920x1080) center/cover;
-  }
+.portfolio-banner:after {
+  content: "";
+  width: 100%;
+  height: 40%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 57, 56, 0)), to(#f5f6f4));
+  background: linear-gradient(to bottom, rgba(43, 57, 56, 0) 0%, #f5f6f4 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.portfolio-banner:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 57, 56, 0.5)), to(rgba(245, 246, 244, 0.7))), url(/assets/img/desktop/avatar/bg.jpg) center;
+  background: linear-gradient(to bottom, rgba(43, 57, 56, 0.5), rgba(245, 246, 244, 0.7)), url(/assets/img/desktop/avatar/bg.jpg) center;
+  -webkit-animation: grow 60s linear 10ms infinite;
+          animation: grow 60s linear 10ms infinite;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+.portfolio-title {
+  font-size: 3rem;
+  color: rgba(245, 246, 244, 0.7);
+  text-shadow: 0 0 1rem #2B3938;
+  margin: 10rem auto auto auto;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-weight: bold;
+}
+.portfolio-title:before {
+  content: '';
+  display: block;
+  height: .15rem;
+  margin-bottom: 1rem;
+  background: #F5F6F4;
+  background: rgba(245, 246, 244, 0.7);
+  -webkit-box-shadow: 0 0 1rem #2B3938;
+          box-shadow: 0 0 1rem #2B3938;
+}
+.portfolio-title:after {
+  content: '';
+  display: block;
+  height: .15rem;
+  margin-top: 1rem;
+  background: #F5F6F4;
+  background: rgba(245, 246, 244, 0.7);
+  -webkit-box-shadow: 0 0 1rem #2B3938;
+          box-shadow: 0 0 1rem #2B3938;
 }
 
 @media only screen and (min-width: 0) {
@@ -443,6 +545,9 @@ hr.modal-separator {
     text-align: justify;
     color: #577371;
   }
+}
+.intro-small {
+  display: block;
 }
 
 @media only screen and (min-width: 0) {

@@ -4,12 +4,64 @@
   &-banner {
     // Default CSS
     @include responsive(mobile) {
+      overflow: hidden;
       min-height: 65vh;
-      background: url(https://via.placeholder.com/1200x1080) center / cover;
+      @include flex(row, center, flex-start, wrap);
+      @include position(relative, null, null, null, null, null);
     }
     // Load image mobile and low resolution
-    @include responsive(image) {
-      background: url(https://via.placeholder.com/1920x1080) center / cover;
+    //@include responsive(image) {
+    //  background: url(/assets/img/desktop/avatar/bg.JPG) bottom / cover;
+    //}
+
+    &:after {
+      content: "";
+      width: 100%;
+      height: 40%;
+      background: linear-gradient(to bottom, rgba($bg-dark, 0) 0%, rgba($bg-light, 1) 100%);
+      @include position(absolute, null, null, 0, 0, -1);
+    }
+
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      transform: translateZ(0);
+      background: linear-gradient(to bottom, rgba($bg-dark, .5), rgba($bg-light, .7)), url(/assets/img/desktop/avatar/bg.jpg) center;
+      animation: grow 60s linear 10ms infinite;
+      transition: all 0.2s ease-in-out;
+      @include position(absolute, 0, null, null, 0, -2);
+    }
+
+  }
+
+  &-title {
+    font-size: 3rem;
+    color: rgba($bg-light, .7);
+    text-shadow: 0 0 1rem $bg-dark;
+    margin: 10rem auto auto auto;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-weight: bold;
+
+    &:before {
+      content: '';
+      display: block;
+      height: .15rem;
+      margin-bottom: 1rem;
+      background: $bg-light;
+      background: rgba($bg-light, .7);
+      box-shadow: 0 0 1rem $bg-dark;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      height: .15rem;
+      margin-top: 1rem;
+      background: $bg-light;
+      background: rgba($bg-light, .7);
+      box-shadow: 0 0 1rem $bg-dark;
     }
   }
 }
@@ -87,6 +139,10 @@
       text-align: justify;
       color: lighten($bg-dark, 20%);
     }
+  }
+
+  &-small {
+    display: block;
   }
 }
 
@@ -461,3 +517,4 @@
     }
   }
 }
+

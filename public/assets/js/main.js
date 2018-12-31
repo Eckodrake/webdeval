@@ -48,3 +48,10 @@
         console.log('callback - particles.js config loaded');
     });
 })(); // End Particles
+
+// ---------------
+// Rellax parallax
+// ---------------
+(function () {
+    new Rellax('.rellax');
+})(); // End Rellax parallax

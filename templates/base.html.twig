@@ -86,9 +86,15 @@
                     </nav>
 
                     <div class="sidebar-footer">
-                        <a href="" target="_blank"><i class="fab fa-facebook fa-lg"></i></a>
-                        <a href="" target="_blank"><i class="fab fa-twitter-square fa-lg"></i></a>
-                        <a href="" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="https://www.facebook.com/taveslin" target="_blank">
+                            <i class="fab fa-facebook fa-lg"></i>
+                        </a>
+                        <a href="https://twitter.com/taveslin" target="_blank">
+                            <i class="fab fa-twitter-square fa-lg"></i>
+                        </a>
+                        <a href="https://fr.linkedin.com/in/taveslin" target="_blank">
+                            <i class="fab fa-linkedin fa-lg"></i>
+                        </a>
                     </div>
                 </div>
             </aside>
@@ -97,7 +103,11 @@
             {# Footer #}
             <div class="footer-design"></div>
             <footer class="footer">
-                Copyright Webdeval 2019 &copy;
+                <p>Copyright <a href="{{ path('portfolio.index') }}" class="footer-link">Webdeval</a> 2019 &copy;</p>
+                <p>
+                    Logo par
+                    <a href="https://twitter.com/meliiplay13" target="_blank" class="footer-link">Mélissa Baldini</a>
+                </p>
             </footer>
         </div>
         {# Scripts #}
@@ -105,6 +115,7 @@
         <script src="{{ asset('assets/js/animatedModal.min.js') }}"></script>
         <script src="{{ asset('assets/js/scrollspy.js') }}"></script>
         <script src="{{ asset('assets/js/particles.min.js') }}"></script>
+        <script src="{{ asset('assets/js/rellax.min.js') }}"></script>
         <script src="{{ asset('assets/js/main.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>

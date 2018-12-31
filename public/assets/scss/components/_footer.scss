@@ -23,7 +23,20 @@
     min-height: 5vh;
     background: $bg-primary;
     grid-column: 2/3; // Take max-width in grid skeleton next sidebar
-    @include flex(row, center, center, null);
+    @include flex(column, center, center, null);
+
+    &-link {
+      @include responsive(mobile) {
+        color: lighten($bg-dark, 15%);
+        transition: color .3s ease;
+      }
+
+      &:hover {
+        @include responsive(mobile) {
+          color: $bg-secondary;
+        }
+      }
+    }
   }
 
   // Tablet horizontal
